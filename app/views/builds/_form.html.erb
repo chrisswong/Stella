@@ -1,0 +1,53 @@
+<%= form_for(@build) do |f| %>
+  <% if @build.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@build.errors.count, "error") %> prohibited this build from being saved:</h2>
+
+      <ul>
+      <% @build.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :releaseNotes %><br>
+    <%= f.text_area :releaseNotes %>
+  </div>
+  <div class="field">
+    <%= f.label :platform %><br>
+    <%= f.text_field :platform %>
+  </div>
+  <div class="field">
+    <%= f.label :buildIdenifier %><br>
+    <%= f.text_field :buildIdenifier %>
+  </div>
+  <div class="field">
+    <%= f.label :accessToken %><br>
+    <%= f.text_field :accessToken %>
+  </div>
+  <div class="field">
+    <%= f.label :domain %><br>
+    <%= f.text_field :domain %>
+  </div>
+  <div class="field">
+    <%= f.label :provision %><br>
+    <%= f.text_field :provision %>
+  </div>
+  <div class="field">
+    <%= f.label :createDate %><br>
+    <%= f.datetime_select :createDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

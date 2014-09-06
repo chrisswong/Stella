@@ -40,4 +40,7 @@ gem 'spring',        group: :development
 
 # Project-specific Gems
 gem 'carrierwave'
+gem 'lagunitas'
+gem 'apktools'
+gem 'mail'
 

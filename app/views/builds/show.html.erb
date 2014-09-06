@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @build.number %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @build.version %>
+</p>
+
+<p>
+  <strong>Releasenotes:</strong>
+  <%= @build.releaseNotes %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @build.platform %>
+</p>
+
+<p>
+  <strong>Buildidenifier:</strong>
+  <%= @build.buildIdenifier %>
+</p>
+
+<p>
+  <strong>Accesstoken:</strong>
+  <%= @build.accessToken %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @build.domain %>
+</p>
+
+<p>
+  <strong>Provision:</strong>
+  <%= @build.provision %>
+</p>
+
+<p>
+  <strong>Createdate:</strong>
+  <%= @build.createDate %>
+</p>
+
+<%= link_to 'Edit', edit_build_path(@build) %> |
+<%= link_to 'Back', builds_path %>
