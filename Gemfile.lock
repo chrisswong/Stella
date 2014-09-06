@@ -88,6 +88,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rqrcode (0.4.2)
     rubyzip (1.1.6)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -136,6 +137,7 @@ DEPENDENCIES
   lagunitas
   mail
   rails (= 4.1.5)
+  rqrcode
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

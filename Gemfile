@@ -43,4 +43,5 @@ gem 'carrierwave'
 gem 'lagunitas'
 gem 'apktools'
 gem 'mail'
+gem 'rqrcode'
 
