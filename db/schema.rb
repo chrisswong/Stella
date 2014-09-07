@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907100855) do
+ActiveRecord::Schema.define(version: 20140907105254) do
 
   create_table "builds", force: true do |t|
     t.string   "number"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 20140907100855) do
     t.string   "accessToken"
     t.string   "domain"
     t.string   "provision"
-    t.datetime "createDate"
     t.string   "displayname"
     t.string   "icon"
+    t.string   "buildFilePath"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

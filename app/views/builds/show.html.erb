@@ -41,11 +41,6 @@
 </p>
 
 <p>
-  <strong>Createdate:</strong>
-  <%= @build.createDate %>
-</p>
-
-<p>
   <strong>Displayname:</strong>
   <%= @build.displayname %>
 </p>
@@ -53,6 +48,11 @@
 <p>
   <strong>Icon:</strong>
   <%= @build.icon %>
+</p>
+
+<p>
+  <strong>Buildfilepath:</strong>
+  <%= @build.buildFilePath %>
 </p>
 
 <%= link_to 'Edit', edit_build_path(@build) %> |

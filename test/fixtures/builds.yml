@@ -9,9 +9,9 @@ one:
   accessToken: MyString
   domain: MyString
   provision: MyString
-  createDate: 2014-09-07 18:08:55
   displayname: MyString
   icon: MyString
+  buildFilePath: MyString
 
 two:
   number: MyString
@@ -22,6 +22,6 @@ two:
   accessToken: MyString
   domain: MyString
   provision: MyString
-  createDate: 2014-09-07 18:08:55
   displayname: MyString
   icon: MyString
+  buildFilePath: MyString

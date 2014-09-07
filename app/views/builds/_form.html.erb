@@ -1,4 +1,4 @@
-<%= form_for(@build) do |f| %>
+<%= form_for @build, :html => {:multipart => true} do |f| %>
   <% if @build.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@build.errors.count, "error") %> prohibited this build from being saved:</h2>
@@ -44,16 +44,16 @@
     <%= f.text_field :provision %>
   </div>
   <div class="field">
-    <%= f.label :createDate %><br>
-    <%= f.datetime_select :createDate %>
-  </div>
-  <div class="field">
     <%= f.label :displayname %><br>
     <%= f.text_field :displayname %>
   </div>
   <div class="field">
     <%= f.label :icon %><br>
     <%= f.text_field :icon %>
+  </div>
+  <div class="field">
+    <%= f.label :buildFilePath %><br>
+    <%= f.file_field :buildFilePath %>
   </div>
   <div class="actions">
     <%= f.submit %>

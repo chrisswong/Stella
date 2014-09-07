@@ -9,9 +9,9 @@ class CreateBuilds < ActiveRecord::Migration
       t.string :accessToken
       t.string :domain
       t.string :provision
-      t.datetime :createDate
       t.string :displayname
       t.string :icon
+      t.string :buildFilePath
 
       t.timestamps
     end

@@ -18,7 +18,7 @@ class BuildsControllerTest < ActionController::TestCase
 
   test "should create build" do
     assert_difference('Build.count') do
-      post :create, build: { accessToken: @build.accessToken, buildIdenifier: @build.buildIdenifier, createDate: @build.createDate, displayname: @build.displayname, domain: @build.domain, icon: @build.icon, number: @build.number, platform: @build.platform, provision: @build.provision, releaseNotes: @build.releaseNotes, version: @build.version }
+      post :create, build: { accessToken: @build.accessToken, buildFilePath: @build.buildFilePath, buildIdenifier: @build.buildIdenifier, displayname: @build.displayname, domain: @build.domain, icon: @build.icon, number: @build.number, platform: @build.platform, provision: @build.provision, releaseNotes: @build.releaseNotes, version: @build.version }
     end
 
     assert_redirected_to build_path(assigns(:build))
@@ -35,7 +35,7 @@ class BuildsControllerTest < ActionController::TestCase
   end
 
   test "should update build" do
-    patch :update, id: @build, build: { accessToken: @build.accessToken, buildIdenifier: @build.buildIdenifier, createDate: @build.createDate, displayname: @build.displayname, domain: @build.domain, icon: @build.icon, number: @build.number, platform: @build.platform, provision: @build.provision, releaseNotes: @build.releaseNotes, version: @build.version }
+    patch :update, id: @build, build: { accessToken: @build.accessToken, buildFilePath: @build.buildFilePath, buildIdenifier: @build.buildIdenifier, displayname: @build.displayname, domain: @build.domain, icon: @build.icon, number: @build.number, platform: @build.platform, provision: @build.provision, releaseNotes: @build.releaseNotes, version: @build.version }
     assert_redirected_to build_path(assigns(:build))
   end
 
