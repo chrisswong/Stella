@@ -28,7 +28,32 @@ class BuildsController < ApplicationController
 
     respond_to do |format|
       if @build.save
-        format.html { redirect_to @build, notice: 'Build was successfully created.' }
+        if(@build.buildFilePath.file.exists?)
+          #Read ipa or apk here
+          extension = File.extname(@build.buildFilePath.url)
+          if (extension == ".ipa")
+            format.html { redirect_to @build, notice: 'Build was successfully created. And IPA uploaded' }
+            # puts @build.buildFilePath.url
+            ipa = Lagunitas::IPA.new(Dir.pwd + '/public' + @build.buildFilePath.url)
+            app = ipa.app     #=> Lagunitas::App
+
+              # Get information about the app
+            puts app.identifier    #=> com.samsoffes.Sample
+            puts app.display_name  #=> Sample
+            puts app.version       #=> 13
+            puts app.short_version #=> 2.2
+              # Remove unzipped app
+            ipa.cleanup
+
+
+          elsif (extension == ".apk")            
+            format.html { redirect_to @build, notice: 'Build was successfully created. And APK uploaded' }
+          else
+            format.html { redirect_to @build, notice: 'Build was successfully created. And file uploaded' }
+          end
+        else
+          format.html { redirect_to @build, notice: 'Build was successfully created. But no file is uploaded' }
+        end
         format.json { render :show, status: :created, location: @build }
       else
         format.html { render :new }
