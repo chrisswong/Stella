@@ -12,6 +12,8 @@
       <th>Domain</th>
       <th>Provision</th>
       <th>Createdate</th>
+      <th>Displayname</th>
+      <th>Icon</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,6 +30,8 @@
         <td><%= build.domain %></td>
         <td><%= build.provision %></td>
         <td><%= build.createDate %></td>
+        <td><%= build.displayname %></td>
+        <td><%= build.icon %></td>
         <td><%= link_to 'Show', build %></td>
         <td><%= link_to 'Edit', edit_build_path(build) %></td>
         <td><%= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' } %></td>

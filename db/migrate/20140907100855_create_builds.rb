@@ -10,6 +10,8 @@ class CreateBuilds < ActiveRecord::Migration
       t.string :domain
       t.string :provision
       t.datetime :createDate
+      t.string :displayname
+      t.string :icon
 
       t.timestamps
     end
