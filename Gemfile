@@ -44,4 +44,5 @@ gem 'lagunitas'
 gem 'apktools'
 gem 'mail'
 gem 'rqrcode'
+gem 'plist'
 

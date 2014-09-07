@@ -45,6 +45,32 @@ class BuildsController < ApplicationController
               # Remove unzipped app
             ipa.cleanup
 
+            manifestObj = {'items' => 
+                            [{ 'assets' => 
+                              [{'kind' => 'software-package', 
+                                'url' =>'localhost:3000/public' + @build.buildFilePath.url }],
+                              'metadata' =>
+                               {'bundle-identifier' =>  app.identifier,
+                               'bundle-version' => app.version,
+                               'kind' => 'software',
+                               'title' => app.display_name}
+
+                            #   ], {'bundle-identifier' =>  app.identifier, 
+                            #     'bundle-version' => app.version,
+                            #     'kind' => 'software',
+                            #     'title' => app.display_name}
+                            }]
+                          }
+            # puts @build.buildFilePath.
+            str = @build.buildFilePath.url
+            list = str.split('/')
+            path = '/public' + list[0..list.count-2].join('/') + '/manifest.plist'
+            puts path
+            # pathList = @build.buildFilePath.url
+            # directory = 
+            File.open(Dir.pwd + path, 'w') {|f| f.write(Plist::Emit.dump(manifestObj)) }
+
+
 
           elsif (extension == ".apk")            
             format.html { redirect_to @build, notice: 'Build was successfully created. And APK uploaded' }

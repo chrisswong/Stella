@@ -65,6 +65,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.1)
     multi_json (1.10.1)
+    plist (3.1.0)
     pngdefry (0.1.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -136,6 +137,7 @@ DEPENDENCIES
   jquery-rails
   lagunitas
   mail
+  plist
   rails (= 4.1.5)
   rqrcode
   sass-rails (~> 4.0.3)
