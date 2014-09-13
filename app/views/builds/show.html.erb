@@ -54,6 +54,15 @@
   <strong>Buildfilepath:</strong>
   <%= @build.buildFilePath %>
 </p>
-
+<p>
+  <strong>OTA:</strong>
+  <%
+        str = @build.buildFilePath.url
+      list = str.split('/')
+      path = list[0..list.count-2].join('/') + '/manifest.plist'
+    %>
+    <%=
+   link_to 'Install OTA', 'itms-services://?action=download-manifest&url=https://192.168.1.62:3001'+path %>
+</p>
 <%= link_to 'Edit', edit_build_path(@build) %> |
 <%= link_to 'Back', builds_path %>

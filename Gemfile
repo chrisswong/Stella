@@ -46,3 +46,5 @@ gem 'mail'
 gem 'rqrcode'
 gem 'plist'
 
+gem 'thin'
+

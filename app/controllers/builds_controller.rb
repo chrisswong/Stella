@@ -48,10 +48,10 @@ class BuildsController < ApplicationController
             manifestObj = {'items' => 
                             [{ 'assets' => 
                               [{'kind' => 'software-package', 
-                                'url' =>'localhost:3000/public' + @build.buildFilePath.url }],
+                                'url' =>'https://192.168.1.62:3001' + @build.buildFilePath.url }],
                               'metadata' =>
                                {'bundle-identifier' =>  app.identifier,
-                               'bundle-version' => app.version,
+                               'bundle-version' => app.short_version,
                                'kind' => 'software',
                                'title' => app.display_name}
 
